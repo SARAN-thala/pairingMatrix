@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha tests/*",
-    "start": "node server/server.js"
+    "start": "node server/server.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "bin": {
     "pairing-matrix": "./server/server.js"
@@ -28,6 +30,8 @@
     "express": "^4.15.3",
     "js-yaml": "^3.8.4",
     "lodash": "^4.17.4",
-    "shelljs": "^0.7.7"
-  }
+    "shelljs": "^0.7.7",
+    "snyk": "^1.319.1"
+  },
+  "snyk": true
 }
